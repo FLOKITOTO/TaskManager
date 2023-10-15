@@ -1,0 +1,11 @@
+.tsm-app {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .tsm-app-ctnr {
+    width: 80%;
+    height: fit-content;
+  }
+}

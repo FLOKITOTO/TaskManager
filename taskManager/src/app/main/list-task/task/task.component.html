@@ -1,0 +1,14 @@
+<mat-card cdkDrag>
+  <mat-card-header>
+    <h1 class="tsm-title">{{ task.name }}</h1>
+    <mat-card-subtitle>{{ task.description }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button (click)="deleteTask()" mat-icon-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button (click)="openDialog()" mat-icon-button>
+      <mat-icon>edit</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,39 @@
+<div class="task-form-ctnr">
+  <h1 mat-dialog-title>{{ this.editMode ? "Editer" : "Ajouter" }}</h1>
+
+  <mat-dialog-content class="tsm-mat-dialog">
+    <div *ngIf="!this.editMode" class="task-form-algn">
+      <form [formGroup]="this.taskForm" (submit)="this.addTask()">
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput type="text" placeholder="Title" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput type="text" placeholder="description" />
+        </mat-form-field>
+
+        <button mat-button color="primary" type="submit">Create task</button>
+        <button mat-button mat-dialog-close>Cancel</button>
+      </form>
+    </div>
+
+    <div *ngIf="this.editMode" class="task-form-algn">
+      <form [formGroup]="this.taskForm" (submit)="this.editTask()">
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput type="text" placeholder="Title" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput type="text" placeholder="description" />
+        </mat-form-field>
+
+        <button mat-button color="primary" type="submit">Edit task</button>
+        <button mat-button mat-dialog-close>Cancel</button>
+      </form>
+    </div>
+  </mat-dialog-content>
+</div>
